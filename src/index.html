@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- parent div  -->
+    <div class="flex items-center justify-center h-lvh w-full bg-[#9ea7a6]">
+        <!-- mobile screen div  -->
+        <div class="rounded-[10px]  shadow-2xl h-[90vh] w-96 bg-white py-4 overflow-x-hidden">
+            <div class="flex items-center justify-between">
+                <div></div>
+                <h1 class="font-bold text-2xl text-center text-gray-800">Expense Splitter</h1>
+                <div></div>
+            </div>
+            <!-- form of basic requirements  -->
+            <form class="flex flex-col items-start px-7 my-10 gap-10">
+                <div class="flex flex-col gap-2 w-full">
+                    <label for="group-name" class="font-semibold text-sm text-gray-600">Group Name:</label>
+                    <input type="text" onfocus="removeGroupError()" placeholder="E.g.,: shimla tour" id="group-name"
+                        class="w-full border-b-2 px-2 outline-none border-gray-300">
+                    <span class="text-xs text-red-700" id="errorGroupName"></span>
+                </div>
+                <div class="flex flex-col gap-2 w-full">
+                    <label for="person-name" class="font-semibold text-sm text-gray-600">Add Members:</label>
+                    <div class="flex flex-row">
+                        <input type="text" onfocus="removePersonError()" placeholder="E.g.,: Person name" id="person-name" name="person-name"
+                            class="w-full border-b-2 px-2 outline-none border-gray-300">
+                        <button onclick="addMember(event)"
+                            class="px-2 text-2xl text-white font-bold bg-gray-800">+</button>
+                    </div>
+                    <span class="text-xs text-red-700" id="errorPersonName"></span>
+                </div>
+                <div id="personName" class="flex items-center gap-3 flex-wrap">
+
+                </div>
+                <button type="submit" onclick="createGroup(event)"
+                    class="w-full bg-gray-500 text-white text-xl font-semibold py-2 rounded-md hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-900 focus:ring-opacity-50">
+                    Create group
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

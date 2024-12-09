@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- parent div  -->
+    <div class="flex items-center justify-center h-lvh w-full bg-[#9ea7a6]">
+        <!-- mobile screen div  -->
+        <div class="rounded-[10px] shadow-2xl h-[90vh] w-96 bg-white py-4 overflow-x-hidden">
+            <div class="flex items-center justify-between px-7 mx-auto">
+
+                <a href=""><i class="fa-solid fa-backward cursor-pointer text-xl text-gray-900 hover:scale-110"></i></a>
+                <h1 id="groupName" class="font-bold text-2xl text-center text-gray-800">Group Name</h1>
+                <a href="list.html"><i
+                        class="fa-solid fa-eye cursor-pointer text-xl text-gray-900 hover:scale-110"></i></a>
+
+            </div>
+            <!-- form of basic requirements  -->
+            <!-- <img src="https://plus.unsplash.com/premium_photo-1673971706769-13a9499e3794?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="" class="h-20 rounded-lg w-[96%] mt-3 mx-auto"> -->
+            <form class="flex flex-col mt-3 items-start px-7 gap-4">
+                <div class="flex flex-col gap-2 w-full">
+                    <label for="group-name" class="font-semibold text-sm text-gray-600">Expense Name:</label>
+                    <input type="text" placeholder="E.g.,  Tickets" id="group-name"
+                        class="w-full border-b-2 px-2 outline-none border-gray-300">
+                </div>
+                <div class="flex flex-col gap-2 w-full">
+                    <label for="group-name" class="font-semibold text-sm text-gray-600">Add Amount:</label>
+                    <input type="number" placeholder="E.g.,  258" id="group-name"
+                        class="w-full border-b-2 px-2 outline-none border-gray-300">
+                </div>
+                <div class="w-full flex flex-col gap-4">
+                    <label for="group-name" class="font-semibold text-sm text-gray-600">Paid by :</label>
+                    <div id="paidBy" class="flex items-center gap-3 flex-wrap">
+
+                    </div>
+                </div>
+                <div class="w-full flex flex-col gap-4">
+                    <label for="group-name" class="font-semibold text-sm text-gray-600">Paid for :</label>
+                    <div id="paidFor" class="flex items-center gap-3 flex-wrap">
+
+                    </div>
+                </div>
+               
+
+
+                <button type="submit"
+                    class="w-full bg-gray-500 text-white text-xl font-semibold py-2 rounded-md hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-900 focus:ring-opacity-50">
+                    Add Expense
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="expnseScript.js"></script>
+</body>
+
+</html>
